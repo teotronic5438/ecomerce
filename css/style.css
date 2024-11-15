@@ -4,6 +4,32 @@ body {
     padding: 0;
     line-height: 1.6;
 }
+
+/***************************
+        Contenedor
+***************************/
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    color: darkblue;
+}
+.div-image{
+    text-align: center;
+}
+
+.div-image img{
+    width: 35%;
+    height: auto;
+}
+
+
+/***************************
+        Cabecera
+***************************/
 header {
     background: #333;
     color: #fff;
@@ -21,23 +47,38 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-}
+
+/***************************
+    Contenido Productos
+***************************/
 #productos .productos-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
 }
+
+/***************************
+    Contenido Reseñas
+***************************/
 #reseñas .reseñas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1em;
 }
+
+
+
+/***************************
+        Pie de pagina
+***************************/
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
 
 /***************************
         Responsive
@@ -51,3 +92,28 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/***************************
+        Prueba Grid
+***************************/
+/* .item{ width: 300px; height: 300px;} */
+.item:nth-child(even) {
+    background-color: #f49f3f;
+}
+
+.item:nth-child(odd) {
+    background-color: #71b1f6;
+}
+
+section.contenedor{
+    /* display: flex; */
+    color: white;
+    display: grid;  /*lo convierto en grilla. dispay: inline-grid*/
+    /* grid-auto-flow: column; /*con esto pareceria felxbox*/
+    /* grid-template-columns: 100px 200Px 340px; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 100px 50px;
+    height: 56vh;
+    background-color: palegoldenrod;
+}
+
