@@ -1,4 +1,4 @@
-# E-commerce Talent Teach
+# E-commerce Talento Tech
 
 <p>Esta es la pre-entrega del proyecto e-commerce propuesto para la cursada.</p>
 <p>Creado para demostrar el uso de HTML, CSS y Display flex yn Grid, asi como técnicas de diseño responsivo.</p>
