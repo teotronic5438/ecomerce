@@ -3,6 +3,11 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    /* background-color: white; */
+}
+main, footer{
+    margin-left: 1.1em;
+    margin-right: 1.1em;
 }
 
 /***************************
@@ -15,7 +20,7 @@ body {
 
 h1{
     text-align: center;
-    color: darkblue;
+    color: white;
 }
 .div-image{
     text-align: center;
@@ -67,7 +72,53 @@ nav ul li a {
     gap: 1em;
 }
 
+/***************************
+    Seccion Contacto
+***************************/
+#contacto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+}
+#contacto h2{
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-align: center;
+}
+.contacto-form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1em;
 
+}
+.formLabel{
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: left;
+    margin: 1.1em;
+}
+.formLabel > button{
+    width: 100%;
+    background-color: #333;
+    padding: 0.5em;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid #5dade2;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+/* Estilo para hover */
+.formLabel > button:hover {
+    background-color: #5dade2;
+    color: #333;
+    border-color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(244, 159, 63, 0.5);
+}
+.imagen-formulario img{
+    width: 100%;
+}
 
 /***************************
         Pie de pagina
@@ -114,6 +165,6 @@ section.contenedor{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px 100px 50px;
     height: 56vh;
-    background-color: palegoldenrod;
+    /* background-color: palegoldenrod; */
 }
 
