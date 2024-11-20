@@ -56,11 +56,92 @@ nav ul li a {
 /***************************
     Contenido Productos
 ***************************/
-#productos .productos-grid {
+.producto {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas */
+    gap: 1em; /* Espaciado entre items */
+    padding: 2em;
+    background-color: #f4f4f4; /* Fondo claro */
+}
+
+/* Estilo para cada item */
+.producto-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen del producto */
+.producto-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+}
+
+/* Título */
+.producto-item h3 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: #333;
+}
+
+/* Descripción */
+.producto-item p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0.5em 0;
+}
+
+/* Precio y descuento */
+.producto-item .precio {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #27ae60; /* Verde para precio */
+}
+
+.producto-item .descuento {
+    font-size: 0.9em;
+    color: #e74c3c; /* Rojo para descuento */
+}
+
+/* Mini formulario */
+.producto-item form {
+    margin-top: 1em;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto-item form input[type="number"] {
+    width: 50px;
+    padding: 0.3em;
+    margin-bottom: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.producto-item form button {
+    background-color: #5dade2;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto-item form button:hover {
+    background-color: #3498db;
 }
 
 /***************************
@@ -80,6 +161,55 @@ nav ul li a {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1em;
 }
+
+/*  div mapas de sucursales */
+/* Contenedor del mapa */
+.mapa-container {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+/* Listado de sucursales */
+.sucursales {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sucursales ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sucursales li {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sucursales li:hover {
+    background-color: #5dade2;
+    color: white;
+}
+
+/* Mapa */
+.mapa-frame {
+    flex: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* div formulario */
 #contacto h2{
     margin-bottom: 1em;
     margin-top: 1em;
