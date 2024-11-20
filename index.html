@@ -24,7 +24,7 @@
             <h2>Bienvenido a nuestra tienda</h2>
             <p>Explora nuestros productos y encuentra lo que necesitas.</p>
         </section>
-        <sectio>
+        <section>
             <h2>Productos</h2>
             <div class="producto">
                 <!-- Inicio de un producto -->
@@ -239,20 +239,30 @@
                 <div class="mapa-container">
                     <!-- Listado de sucursales -->
                     <div class="sucursales">
-                        <p>Vicenete Lopez:</p>
+                        <!-- <p>Vicenete Lopez:</p>
                         <p>Juan Bautista alberti 1965</p>
                         <p>Telefono: 4765 - 5423</p>
                         <hr>
                         <p>Vicenete Lopez:</p>
                         <p>Juan Bautista alberti 1965</p>
-                        <p>Telefono: 4765 - 5423</p>
+                        <p>Telefono: 4765 - 5423</p> -->
+                        <ul>
+                            <li class="item-sucursal" onclick="actualizarMapa('25 de Mayo 101, CABA')">
+                                Vicente Lopez<br>25 de Mayo 101<br>Tel: 4956-7423</li>
+                            <li class="item-sucursal" onclick="actualizarMapa('Av. Corrientes 1500, CABA')">
+                                Almagro<br>Av. Corrientes 1500<br>Tel: 4956-2035</li>
+                            <li class="item-sucursal" onclick="actualizarMapa('Rivadavia 2020, CABA')">
+                                Parque Rivadavia<br>Rivadavia 2020<br>tel: 4785-8655</li>
+                            <li class="item-sucursal" onclick="actualizarMapa('Florida 800, CABA')">
+                                Microcentro<br>Florida 800<br>Tel: 4589-6985</li>
+                        </ul>
                     </div>
                     <!-- Mapa dinámico -->
                     <div class="mapa-frame">
                         <iframe id="googleMap" 
                                 src="https://www.google.com/maps?q=25%20de%20Mayo%20101,%20CABA&output=embed" 
                                 width="100%" 
-                                height="300" 
+                                height="100%" 
                                 style="border:0;" 
                                 allowfullscreen="" 
                                 loading="lazy">
@@ -266,16 +276,16 @@
                     <form action="https://formspree.io/f/mwpkqqjj" method="POST">
                         <div class="formLabel">
                             <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required>
+                            <input class="entrada-form" type="text" id="nombre" name="nombre" required>
                         </div>
                 
                         <div class="formLabel">                                                                                                                 
                             <label for="correo">Correo Electrónico:</label>
-                            <input type="email" id="correo" name="correo" required>
+                            <input class="entrada-form" type="email" id="correo" name="correo" required>
                         </div>
                         <div class="formLabel">
                             <label for="mensaje">Mensaje:</label>
-                            <textarea id="mensaje" name="mensaje" required></textarea>
+                            <textarea class="entrada-form" id="mensaje" name="mensaje" required></textarea>
                         </div>
                         <div class="formLabel">
                             <button type="submit">Enviar</button>

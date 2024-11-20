@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    /* background-color: white; */
+    background-color: white;
 }
 main, footer{
     margin-left: 1.1em;
@@ -58,10 +58,12 @@ nav ul li a {
 ***************************/
 .producto {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 columnas */
+    /* 6 columnas  4 TABLET 2 MOBILE*/
+    grid-template-columns: repeat(6, 1fr); 
     gap: 1em; /* Espaciado entre items */
     padding: 2em;
-    background-color: #f4f4f4; /* Fondo claro */
+    /* Fondo claro VER DIFERENCIA CON SHADOW */
+    /* background-color: #f4f4f4;  */
 }
 
 /* Estilo para cada item */
@@ -173,10 +175,10 @@ nav ul li a {
 /* Listado de sucursales */
 .sucursales {
     flex: 1;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
     padding: 1em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .sucursales ul {
@@ -187,12 +189,13 @@ nav ul li a {
 
 .sucursales li {
     margin: 0.5em 0;
-    padding: 0.5em;
+    padding: 0 0.5em;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 0.9em;
 }
 
 .sucursales li:hover {
@@ -207,7 +210,9 @@ nav ul li a {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+/* .mapa-frame frame{
+    height: 100%;
+} */
 
 /* div formulario */
 #contacto h2{
@@ -238,6 +243,17 @@ nav ul li a {
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
+.entrada-form{
+    width: 100%;
+}
+input.entrada-form{
+    height: 2em;
+}
+textarea.entrada-form{
+    height: 5em;
+}
+
 /* Estilo para hover */
 .formLabel > button:hover {
     background-color: #5dade2;
