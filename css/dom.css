@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+/*****************
+    cabecera
+******************/
+header{
+    background: #333;
+    padding: 0.5em;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.menu-item_link{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*******************
+menu hamburguesa
+*******************/
+.toggle{
+    position: relative;
+	display: none;
+	background: none;
+	border: none;
+    color: white;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+}
+nav #menu{
+    transition: all 4s ease;
+}
+
+ /*********  hamburguesa ******/
+ @media (max-width:767px){
+    nav { 
+        /* background-color: #b83564;  */
+        display: flex;
+        height: auto;
+        position: sticky;
+        top: 0;
+        z-index: 1050;
+    }
+    /* al entrar en el responsive preciso cambiar la direccion de horizontal a vertical */
+    nav ul.menu{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* clase adicional para manejar los item indivitualmente*/
+    .menu-item{
+        width: 100%;
+        text-align: center;
+        color: azure;
+        padding: 0.3em 0;
+    }
+    /* oculto el menu ul para que se muestre solo al hacer click*/
+    .menu{
+        width: 100%;
+        display: none;
+    }
+    /* hago visible el icono hamburguesa*/
+    .toggle{
+        display: inline;
+        z-index: 1000;
+        color: green; /* jugar con este jejje*/
+    }
+    /* esta es la clase que activo y desactivo con js
+    si se activa muestra el ul, sino queda en display none linea 67*/
+    .mostrar{
+        display: flex;
+    }
+}
+/*********  hamburguesa ******/
+
+/*****************
+    main
+******************/
+
+/*****************
+    pie
+******************/
+footer{
+    background: #333;
+    color: #fff;
+    /* padding: 1em 0; */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0.5em;
+}
+footer > p{
+    margin: 0;
+}
