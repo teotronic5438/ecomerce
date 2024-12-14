@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/************************
+        header
+************************/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #333;;
+    color: white;
+    align-items: center;
+}
+h1 {
+    display: flex;
+    align-items: center; /* Centra verticalmente el ícono y el texto */
+    font-size: 1.5em;
+    gap: 0.5em; /* Espaciado entre el ícono y el texto */
+}
+
+h1 img {
+    width: 40px; /* Ajusta el tamaño del ícono */
+    height: 40px;
+}
+.menu{
+    display: flex;
+    list-style: none;
+    margin-right: 10px;
+}
+.menu-item{
+    padding: 0.6em;
+    text-align: center;
+}
+.menu-item_link{
+    text-decoration: none;
+    cursor: pointer;
+    color: azure;
+}
+
+/*  menu fixed desplazamiento   */
+#menu{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* transition: all 0.5s linear; */
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+#menu.hide{
+    /* transform: translateY(-100%); */
+    /* para deslizar menu hacia arriba ojo con padding */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+/* Espacio para el menú fijo */
+main {
+    padding-top: 80px; 
+}
+
+/***************************
+        Footer
+***************************/
+footer {
+    background: #333;
+    color: azure;
+    text-align: center;
+    padding: 1em 0;
+}
