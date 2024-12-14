@@ -63,6 +63,22 @@ main {
     padding-top: 80px; 
 }
 
+/*  HAMBURGUESA  */
+.abrir-menu{
+    display: none; /* Se muestra solo en pantallas pequeñas */
+    position: absolute; /* Posición relativa al header */
+    top: 50%; /* Centra verticalmente el ícono */
+    right: 1em; /* Se alinea al borde derecho con un margen */
+    transform: translateY(-50%); /* Ajusta el centrado vertical exacto */
+    cursor: pointer;
+
+}
+.burger{
+    padding: 0.2em;
+    font-size: 1.5em;
+    border: #333;
+}
+
 /***************************
         Footer
 ***************************/
@@ -71,4 +87,29 @@ footer {
     color: azure;
     text-align: center;
     padding: 1em 0;
+}
+
+/***************************
+        Mediaquerys
+***************************/
+@media screen and (max-width: 768px) {
+    /* .abrir-menu{
+        display: block;
+    }
+    .menu{
+        display: none;
+    } */
+    nav{
+        position: fixed;
+        /* arrancar arriba de pantalla y a la derecha */
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        z-index: 1000
+    }
+    .menu{
+        flex-direction: column;
+    }
 }
