@@ -88,6 +88,108 @@ main {
 }
 
 /***************************
+    Contenido Productos
+***************************/
+
+.producto{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1em;
+    padding: 2em;
+}
+
+/* Estilo para cada item */
+.producto-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 300px; /* Fija un mínimo alto */
+    min-width: 200px; /* O el ancho deseado */
+}
+.producto-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Imagen del producto */
+.producto-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+    width: 170px;
+    height: 370px;
+    object-fit: fill;
+}
+
+/* Título */
+.producto-item h3 {
+    font-size: 1em;
+    margin: 0.5em 0;
+    color: #333;
+    /* color oscuro para el titulo */
+}
+
+/* Descripción */
+.producto-item p {
+    font-size: 0.9em;
+    color: #666;
+    /* color un poco mas claro para descripcion */
+    margin: 0.5em 0;
+}
+
+/* Precio y descuento */
+.producto-item .precio {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #27ae60; /* Verde para precio */
+}
+.producto-item .descuento {
+    font-size: 0.9em;
+    color: #e74c3c; /* Rojo para descuento */
+}
+
+/* Mini formulario */
+.producto-item form {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.producto-item form input[type="number"] {
+    width: 50px;
+    padding: 0.3em;
+    margin-bottom: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+.producto-item form button {
+    background-color: #5dade2;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.producto-item form button:hover {
+    background-color: #2277b0;
+}
+
+/* .precio-compra{
+    position: relative;
+    bottom: 0;
+} */
+
+/***************************
         Footer
 ***************************/
 footer {
@@ -100,7 +202,14 @@ footer {
 /***************************
         Mediaquerys
 ***************************/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .producto{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 @media screen and (max-width: 768px) {
+    /* solo menu hamburguesa */
     .abrir-menu, .cerrar-menu{
         display: block;
         border: 0;
@@ -124,10 +233,11 @@ footer {
         /* arrancar arriba de pantalla y a la derecha */
         top: 0;
         right: 0;
+        /* left: 0; */
         bottom: 0;
         background-color: #1c1c1c;
         padding: 2rem;
-        z-index: 1000;
+        z-index: 2000;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5)
     }
     nav.visible{
@@ -135,4 +245,16 @@ footer {
         visibility: visible;
     }
 
+    /* tabla productos */
+    .producto{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    /* tabla productos */
+    .producto{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

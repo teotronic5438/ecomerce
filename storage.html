@@ -25,15 +25,34 @@
         </nav>
     </header>
     <main>
-        <section style="height: 2000px;">
+        <!-- <section style="height: 2000px;">
             <h1>Contenido de la página</h1>
+        </section> -->
+        <h2>Productos</h2>
+        <section class="listado-productos producto">
+            <!-- Inicio de un producto -->
+            <article class="producto-item">
+                <img src="./img/pc_gamer.jpg" alt="Producto">
+                <h3>Title del Producto</h3>
+                <p>Descripción corta del producto.</p>
+                <div>
+                    <span class="precio">$99.99</span>
+                    <span class="descuento">10% OFF</span>
+                </div>
+                <form action="/agregar-carrito" method="POST">
+                    <input type="number" name="cantidad" min="1" value="1">
+                    <button type="submit">Agregar al carrito</button>
+                </form>
+            </article>
+            <!-- Fin del bloque producto -->
         </section>
+
     </main>
     <footer>
         <p>&copy; 2024 Tienda Virtual. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- <script src="./js/storage.js"></script> -->
+    <script src="./js/menuamburguesa.js"></script>
      <script src="./js/carrito.js"></script>
 </body>
 </html>
